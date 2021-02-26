@@ -131,7 +131,8 @@ class Update extends Command
 
         // Make request
         $content = json_decode(
-            $this->request("http://openexchangerates.org/api/latest.json?base={$defaultCurrency}&app_id={$api}&show_alternative=1")
+            //$this->request("http://openexchangerates.org/api/latest.json?base={$defaultCurrency}&app_id={$api}&show_alternative=1")
+            $this->request("http://openexchangerates.org/api/latest.json?app_id={$api}&show_alternative=1")
         );
 
         // Error getting content?
